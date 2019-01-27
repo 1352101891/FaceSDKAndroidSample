@@ -40,13 +40,18 @@
             android:name="com.baidu.idl.sample.ui.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/Theme.AppCompat.Light">
+
+        </activity>
+
+        <activity android:name="com.baidu.idl.sample.ApiActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-
         <activity android:name="com.baidu.idl.sample.ui.RegisterActivity"/>
         <activity android:name="com.baidu.idl.sample.ui.UserActivity"/>
         <activity android:name="com.baidu.idl.sample.ui.BatchImportActivity"/>

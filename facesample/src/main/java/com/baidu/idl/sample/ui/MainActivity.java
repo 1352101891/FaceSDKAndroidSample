@@ -8,6 +8,7 @@ import android.text.Html;
 import android.view.View;
 import android.widget.TextView;
 
+import com.baidu.idl.sample.ApiActivity;
 import com.baidu.idl.sample.R;
 import com.baidu.idl.sample.common.GlobalSet;
 import com.baidu.idl.sample.utils.ToastUtils;
@@ -84,17 +85,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         {
             Intent intent = null;
             if (id == R.id.layout_register && GlobalSet.FACE_AUTH_STATUS == 0) {
-                if (GlobalSet.getLiveStatusValue() == GlobalSet.LIVE_STATUS.RGB_DEPTH) {
-                    if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.OBI_ASTRA_PRO) {
-                        intent = new Intent(this, OrbbecProRegisterActivity.class);
-                    } else if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.OBI_ASTRA_MINI) {
-                        intent = new Intent(this, OrbbecMiniRegisterActivity.class);
-                    } else if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.HUAJIE_AMY_MINI) {
-                        intent = new Intent(this, IminectRegisterActivity.class);
-                    }
-                } else {
-                    intent = new Intent(this, RegisterActivity.class);
-                }
+                Intent intent1=new Intent(this, ApiActivity.class);
+                this.startActivity(intent1);
+//                if (GlobalSet.getLiveStatusValue() == GlobalSet.LIVE_STATUS.RGB_DEPTH) {
+//                    if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.OBI_ASTRA_PRO) {
+//                        intent = new Intent(this, OrbbecProRegisterActivity.class);
+//                    } else if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.OBI_ASTRA_MINI) {
+//                        intent = new Intent(this, OrbbecMiniRegisterActivity.class);
+//                    } else if (GlobalSet.getStructuredLightValue() == GlobalSet.STRUCTURED_LIGHT.HUAJIE_AMY_MINI) {
+//                        intent = new Intent(this, IminectRegisterActivity.class);
+//                    }
+//                } else {
+//                    intent = new Intent(this, RegisterActivity.class);
+//                }
             } else if (id == R.id.layout_manager && GlobalSet.FACE_AUTH_STATUS == 0) {
                 intent = new Intent(this, UserActivity.class);
             } else if (id == R.id.layout_pass && GlobalSet.FACE_AUTH_STATUS == 0) {
