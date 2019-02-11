@@ -59,7 +59,7 @@
         android:layout_centerHorizontal="true"
         android:background="@drawable/circle_bg">
 
-        <com.baidu.idl.sample.view.CircleImageView
+        <com.baidu.idl.face.sample.view.CircleImageView
             android:id="@+id/image"
             android:layout_width="60dp"
             android:layout_height="60dp"
@@ -193,7 +193,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.baidu.idl.sample.view.CirclePercentView
+                <com.baidu.idl.face.sample.view.CirclePercentView
                     android:id="@+id/circle_rgb_live"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
@@ -222,7 +222,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.baidu.idl.sample.view.CirclePercentView
+                <com.baidu.idl.face.sample.view.CirclePercentView
                     android:id="@+id/circle_nir_live"
                     android:layout_width="44dp"
                     android:layout_height="44dp"
@@ -251,7 +251,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <com.baidu.idl.sample.view.CirclePercentView
+                <com.baidu.idl.face.sample.view.CirclePercentView
                     android:id="@+id/circle_depth_live"
                     android:layout_width="44dp"
                     android:layout_height="44dp"

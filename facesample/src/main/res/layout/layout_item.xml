@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:paddingBottom="15dp">
 
-    <com.baidu.idl.sample.view.CircleImageView
+    <com.baidu.idl.face.sample.view.CircleImageView
         android:id="@+id/image"
         android:layout_width="60dp"
         android:layout_height="60dp"

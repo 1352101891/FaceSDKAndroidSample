@@ -40,7 +40,7 @@
         android:textSize="16dp"
         android:textStyle="bold"/>
 
-    <com.baidu.idl.sample.view.CustomRadioGroup
+    <com.baidu.idl.face.sample.view.CustomRadioGroup
         android:id="@+id/rg_track_angle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
                     android:src="@mipmap/two_seventy_image"/>
             </RelativeLayout>
         </LinearLayout>
-    </com.baidu.idl.sample.view.CustomRadioGroup>
+    </com.baidu.idl.face.sample.view.CustomRadioGroup>
 
     <Button
         android:id="@+id/confirm_btn"

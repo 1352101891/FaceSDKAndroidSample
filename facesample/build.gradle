@@ -6,7 +6,7 @@ android {
 
 
     defaultConfig {
-        minSdkVersion 21
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -43,17 +43,32 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation  'com.android.support:appcompat-v7:27.1.1'
-    implementation  'com.android.support:recyclerview-v7:27.1.1'
-    implementation 'com.google.code.gson:gson:2.8.5'
-    implementation 'com.github.bumptech.glide:glide:3.7.0'
-
-    implementation(name: 'facelibrary', ext: 'aar')
+    api(name: 'facelibrary', ext: 'aar')
+    api(name: 'animated-vector-drawable-27.1.1', ext: 'aar')
+    api(name: 'appcompat-v7-27.1.1', ext: 'aar')
+    api(name: 'livedata-core-1.1.0', ext: 'aar')
+    api(name: 'recyclerview-v7-27.1.1', ext: 'aar')
+    api(name: 'runtime-1.1.0', ext: 'aar')
+    api(name: 'support-compat-27.1.1', ext: 'aar')
+    api(name: 'support-core-ui-27.1.1', ext: 'aar')
+    api(name: 'support-core-utils-27.1.1', ext: 'aar')
+    api(name: 'support-fragment-27.1.1', ext: 'aar')
+    api(name: 'support-vector-drawable-27.1.1', ext: 'aar')
+    api(name: 'viewmodel-1.1.0', ext: 'aar')
     api(name: 'orbbec', ext: 'aar')
     api(name: 'iminect', ext: 'aar')
+    api files('libs/glide-3.7.0.jar')
+    api files('libs/gson-2.8.5.jar')
+    api files('libs/common-1.1.0.jar')
+    api files('libs/support-annotations-27.1.1.jar')
 
-//    compile project(':facelibrary')
-//    api project(path: ':orbbec')
-//    api project(':iminect')
+
+    //    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    //    implementation 'com.google.code.gson:gson:2.8.5'
+    //    implementation 'com.github.bumptech.glide:glide:3.7.0'
+    //    compile project(':facelibrary')
+    //    api project(path: ':orbbec')
+    //    api project(':iminect')
+
 }

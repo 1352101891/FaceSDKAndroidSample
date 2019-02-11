@@ -1,2 +1,2 @@
-include ':app', ':facesample'
-//,':facelibrary',':orbbec',':iminect'
+include ':app', ':facesample',':facelibrary'
+//,':orbbec',':iminect'

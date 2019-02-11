@@ -8,7 +8,7 @@
     android:layout_marginRight="43dp"
     android:layout_marginTop="20dp">
 
-    <com.baidu.idl.sample.view.DrawView
+    <com.baidu.idl.face.sample.view.DrawView
         android:layout_width="match_parent"
         android:layout_height="133dp"
         xcustom:drawColor="#FF5A5376"

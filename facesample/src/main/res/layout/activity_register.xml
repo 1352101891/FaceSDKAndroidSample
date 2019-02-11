@@ -18,13 +18,13 @@
         android:layout_centerHorizontal="true"
         android:visibility="visible"
         android:layout_marginTop="67dp">
-        <com.baidu.idl.sample.view.DrawView
+        <com.baidu.idl.face.sample.view.DrawView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             xcustom:drawColor="#343966"
             xcustom:drawRoundRadius="17dp"
             xcustom:drawStyleFill="true">
-        </com.baidu.idl.sample.view.DrawView>
+        </com.baidu.idl.face.sample.view.DrawView>
 
         <TextView
             android:id="@+id/input_name"
