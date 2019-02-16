@@ -392,6 +392,9 @@ public class ImportFileManager {
                         if (mImportListener != null) {
                             mImportListener.showToastMessage(""+nameResult);
                         }
+                        //保存日志并且重置参数
+                        reset(environment);
+                        saveLog(logBuilder);
                         return;
                     }
 
@@ -413,6 +416,11 @@ public class ImportFileManager {
                         if (mImportListener != null) {
                             mImportListener.showToastMessage("已经存在该用户，重复注册!");
                         }
+                        // 保存日志文件
+                        //保存日志并且重置参数
+                        reset(environment);
+                        saveLog(logBuilder);
+                        return;
                     }
 
                     // 获取图片路径
@@ -540,16 +548,9 @@ public class ImportFileManager {
 
                 Log.i(TAG, "总人脸数:" + mTotalCount + ", 完成：" + mFinishCount
                         + " 成功:" + mSuccessCount + " 失败:" + mFailCount);
-
-                // 保存日志文件
-                File newFile = FileUtils.getFaceDirectory();
-                FileUtils.writeTxtToFile(newFile.getPath(), logBuilder.toString(), "log.txt");
-                Log.e(TAG,""+logBuilder);
-                // 还原检测参数配置
-                environment.detectInterval = 200;
-                environment.trackInterval = 500;
-                FaceSDKManager.getInstance().getFaceDetector().loadConfig(environment);
-
+                //保存日志并且重置参数
+                reset(environment);
+                saveLog(logBuilder);
                 // 导入完成（弹出导入完成信息框）
                 if (mImportListener != null) {
                     mImportListener.endImport(mFinishCount, mSuccessCount, mFailCount);
@@ -557,6 +558,22 @@ public class ImportFileManager {
 
             }
         });
+    }
+
+    public void reset(FaceEnvironment environment){
+
+        // 还原检测参数配置
+        environment.detectInterval = 200;
+        environment.trackInterval = 500;
+        FaceSDKManager.getInstance().getFaceDetector().loadConfig(environment);
+    }
+
+    public void saveLog(StringBuilder logBuilder){
+
+        // 保存日志文件
+        File newFile = FileUtils.getFaceDirectory();
+        FileUtils.writeTxtToFile(newFile.getPath(), logBuilder.toString(), "log.txt");
+        Log.e(TAG,""+logBuilder);
     }
 
 
